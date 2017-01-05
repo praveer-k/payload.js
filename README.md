@@ -10,7 +10,8 @@ AngularJS did achieve this idea in its ng version 2.0 by considering goodness of
 
 This version of the payload.js demonstrate the goodness of keeping parts of the application into components and how it can be achieved using JQuery style of doing things.
 
-Few issues that you might get currently (because the implementation was discontinued !) are -
+Few issues that you might get currently (because the implementation was discontinued !) are:
+
 1. History cannot be saved.
 2. Routing is not implemented.
 
