@@ -1,0 +1,103 @@
+<html >
+<title>Praveer Kumar.com</title>
+<meta charset="UTF-8">
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='pragma' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<head>
+	<link rel="icon" href="favicon.png"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<script type="text/javascript" src="payload.js"></script>
+	<style>
+	#container{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.box{
+		float: left;
+		margin: 10px;
+		margin-top: 30px;
+		width: 450px;
+		height: 300px;
+		display: table;
+		text-align: left;
+		background: #1B2123;
+	}
+	.box .title{
+		border:0px solid #f00;
+		margin:5px;
+		text-indent: 35px;
+		color:#fff;
+		font: 20px Tahoma;
+	}
+	.box .content{
+		margin: 35px;
+		margin-top: 10px;
+		background-color:#eee;
+		height: 260px;
+		width: 380px;
+		overflow: hidden;
+	 	-moz-box-shadow:    inset 0 5px 10px #777;
+	   	-webkit-box-shadow: inset 0 5px 10px #777;
+	   	box-shadow:         inset 0 5px 10px #777;
+		display:cell;
+	}
+	.box img.icon{
+		height: 256px;
+		width: 256px;
+		position: absolute;
+		margin-top: -118px;
+		margin-left: -5px;
+		border:0px solid #f00;
+	}
+	.box #box-data{
+		overflow-x: hidden;
+		overflow-y: auto;
+		height:286px;
+		width:380px;
+		margin-top: -2px;
+	}
+	.progress{
+		width: 100%;
+		height: 3px;
+		overflow: hidden;
+		background: #57D5F2;
+		text-align: center;
+		position: relative;
+		float: left;
+	}
+	#popUp{
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		background-color: rgba(0,0,0,0.7);
+		color:#444;
+		width: 100%;
+		height: 100%;
+		border: 1px solid #444;
+	}
+	</style>
+</head>
+<body>
+<div id="container">
+	<h2>Demo - Payload.js </h2><hr/>
+	<p>Considering each content div as potential load unit (component) that receives information from the server using ajax request.</p>
+	<div class="box">
+		<div class="title">		Message Box		</div>
+		<div class="content">
+			<div id="box-progress" class="progress"></div>
+			<div id="box-data"></div>
+		</div>
+	</div>
+</div>
+<div id="popUp" style="display:none;"></div>
+</body>
+<script>
+	var pl = new Payload({target:"#box-data", refreshRate:5000, preloader:{ target:"#box-progress", type:"progressBar", background: {color: "#CC1C3F", image:"none"} }});
+	pl.HTML({action: "apps.php" });
+</script>
+</html>
+</html>
